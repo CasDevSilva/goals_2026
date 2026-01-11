@@ -31,7 +31,7 @@ const Info = () => {
 
     return (
         <>
-            <div className='flex flex-row gap-8'>
+            <div className='flex flex-col lg:flex-row gap-8'>
                 <Matcher
                     userGoals={userGoals}
                     setUserGoals={setUserGoals}

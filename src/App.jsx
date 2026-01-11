@@ -3,12 +3,10 @@ import Title from "./components/Title.jsx";
 
 const App = () => {
     return (
-        <div className="min-h-screen p-8">
-            <div className="max-w-7xl mx-auto">
-                <div className="bg-ink-black rounded-lg p-8 border border-jet-black">
-                    <Title/>
-                    <Info/>
-                </div>
+        <div className="min-h-screen flex flex-col items-center justify-center px-4 py-8">
+            <div className="w-full max-w-7xl">
+                <Title/>
+                <Info/>
             </div>
         </div>
     )

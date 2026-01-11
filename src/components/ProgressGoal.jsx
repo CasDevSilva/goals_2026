@@ -49,11 +49,11 @@ const ProgressGoal = ({userCounter, onSeeNotes}) => {
     };
 
     return (
-        <div className="w-1/3">
-            <h2 className="text-porcelain text-sm font-semibold tracking-widest mb-4 text-right">
+        <div className="w-full lg:w-1/3">
+            <h2 className="text-porcelain text-sm font-semibold tracking-widest mb-4 lg:text-right">
                 PROGRESS OVERVIEW
             </h2>
-            <div className="flex flex-col gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
                 {Object.keys(goals).map(goalKey => {
                     const goal = goals[goalKey];
                     const current = userCounter[goal.id] || 0;

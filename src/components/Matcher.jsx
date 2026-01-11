@@ -43,9 +43,9 @@ const Matcher = ({userGoals, setUserGoals, userCounter, setUserCounter, userNote
     }
 
     return (
-        <div className='w-2/3'>
+        <div className='w-full lg:w-2/3'>
             <h2 className='text-porcelain text-sm font-semibold tracking-widest mb-4'>YOUR ACTIVITIES</h2>
-            <div className='flex flex-row flex-wrap gap-4'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
                 {Object.keys(goals).map(goalKey => {
                     const goal = goals[goalKey];
                     const isCompleted = validDay(goal.id);
@@ -53,11 +53,10 @@ const Matcher = ({userGoals, setUserGoals, userCounter, setUserCounter, userNote
                     return (
                         <div 
                             key={goal.id}
-                            className='bg-[#F5F5DC] rounded-xl p-4 w-44 flex flex-col justify-between min-h-[180px]'
+                            className='bg-[#F5F5DC] rounded-xl p-4 flex flex-col justify-between min-h-[180px]'
                         >
                             <div>
-                                <h3 className='text-ink-black font-bold text-lg mb-2'>{goal.name}</h3>
-                                <p className='text-gray-500 text-xs mb-2'>Add notes...</p>
+                                <h3 className='text-ink-black font-bold text-lg mb-3'>{goal.name}</h3>
                             </div>
                             <div className='flex flex-col gap-2'>
                                 <textarea
